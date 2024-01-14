@@ -1,13 +1,13 @@
 # Gender-and-Age-Detection   <img alt="GitHub" src="https://img.shields.io/github/license/abdelkhalek-haddany/Age-Gender-predection-using-CNN">
 
+<h2><a href="https://www.canva.com/design/DAF5M2rSX8w/EMkFTmvGx_P2qjQyUFUtmQ/edit?utm_content=DAF5M2rSX8w&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Sample presentation about this project</a></h2>
 <h2>Objective :</h2>
 <p>To build a gender and age detector that can approximately guess the gender and age of the person (face) in a picture or through webcam.</p>
 
 <h2>About the Project :</h2>
 <p>In this Python Project, I had used Deep Learning to accurately identify the gender and age of a person from a single image of a face. I used the models trained by <a href="https://susanqq.github.io/UTKFace/">UTKFace</a>. The predicted gender may be one of ‘Male’ and ‘Female’, and the predicted age may be one of the following ranges- (0 – 2), (4 – 6), (8 – 12), (15 – 20), (25 – 32), (38 – 43), (48 – 53), (60 – 100) (8 nodes in the final softmax layer). It is very difficult to accurately guess an exact age from a single image because of factors like makeup, lighting, obstructions, and facial expressions. And so, I made this a classification problem instead of making it one of regression.</p>
 
-<h2>Dataset :</h2>
-<p>For this python project, I had used the Adience dataset; the dataset is available in the public domain and you can find it <a href="https://www.kaggle.com/ttungl/adience-benchmark-gender-and-age-classification">here</a>. UTKFace dataset is a large-scale face dataset with long age span (range from 0 to 116 years old). The dataset consists of over 20,000 face images with annotations of age, gender, and ethnicity. The images cover large variation in pose, facial expression, illumination, occlusion, resolution, etc. This dataset could be used on a variety of tasks, e.g., face detection, age estimation, age progression/regression, landmark localization, etc.</p>
+/p>
 
 <h2>Additional Python Libraries Required :</h2>
 <ul>
@@ -34,28 +34,16 @@
 
 <h2>The contents of this Project :</h2>
 <ul>
-  <li>opencv_face_detector.pbtxt</li>
-  <li>opencv_face_detector_uint8.pb</li>
-  <li>age_deploy.prototxt</li>
-  <li>age_net.caffemodel</li>
-  <li>gender_deploy.prototxt</li>
-  <li>gender_net.caffemodel</li>
-  <li>a few pictures to try the project on</li>
-  <li>detect.py</li>
+  <li>2.1_train_age_model.ipynb</li>
+  <li>2.2_train_gender_model.ipynb</li>
+  <li>3.1_Pred_Final.ipynb</li>
+  <li>TestModels.ipynb</li>
  </ul>
- <p>For face detection, we have a .pb file- this is a protobuf file (protocol buffer); it holds the graph definition and the trained weights of the model. We can use this to run the trained model. And while a .pb file holds the protobuf in binary format, one with the .pbtxt extension holds it in text format. These are TensorFlow files. For age and gender, the .prototxt files describe the network configuration and the .caffemodel file defines the internal states of the parameters of the layers.</p>
  
  <h2>Usage :</h2>
  <ul>
   <li>Download my Repository</li>
   <li>Open your Command Prompt or Terminal and change directory to the folder where all the files are present.</li>
-  <li><b>Detecting Gender and Age of face in Image</b> Use Command :</li>
+  <li><b>Detecting Gender and Age of face in Image</b> Using the TestModels.py file</li>
+  </ul>
   
-      python detect.py --image <image_name>
-</ul>
-  <p><b>Note: </b>The Image should be present in same folder where all the files are present</p> 
-<ul>
-  <li><b>Detecting Gender and Age of face through webcam</b> Use Command :</li>
-  
-      python detect.py
-</ul>
